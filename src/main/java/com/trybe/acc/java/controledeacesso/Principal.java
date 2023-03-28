@@ -15,6 +15,15 @@ public class Principal {
     Scanner sc = new Scanner(System.in);
     ArrayList<Short> ages = new ArrayList<Short>();
 
+    short option = 1;
+
+    while (option == 1) {
+      System.out.println("Entre com o número correspondente à opção desejada:");
+      System.out.println("1 - Acessar o estabelecimento");
+      System.out.println("2 - Finalizar sistema e mostrar relatório");
+
+    }
+
     sc.close();
   }
 }
