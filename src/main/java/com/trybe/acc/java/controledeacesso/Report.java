@@ -12,10 +12,10 @@ public class Report {
    * Método getReport - agrupa informações de visitantes.
    */
   public void getReport(ArrayList<Short> ages) {
-    int menores = 0;
-    int adultas = 0;
-    int idosos = 0;
-    int total = 0;
+    short menores = 0;
+    short adultas = 0;
+    short idosos = 0;
+    short total = 0;
 
     for (short age : ages) {
       if (age < 18) {
@@ -34,7 +34,7 @@ public class Report {
   /**
    * Método printReport - Imprime informações sobre os visitantes.
    */
-  public void printReport(int menores, int adultas, int idosos, int total) {
+  public void printReport(short menores, short adultas, short idosos, short total) {
     Locale.setDefault(Locale.US);
 
     DecimalFormat df = new DecimalFormat("0.00");
