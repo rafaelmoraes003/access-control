@@ -17,7 +17,7 @@ public class Report {
     int idosos = 0;
     int total = 0;
 
-    for (int age : ages) {
+    for (short age : ages) {
       if (age < 18) {
         menores += 1;
       } else if (age >= 18 && age <= 49) {
