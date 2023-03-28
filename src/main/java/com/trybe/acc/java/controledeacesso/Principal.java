@@ -36,6 +36,18 @@ public class Principal {
         break;
       }
 
+      System.out.println("Entre com a idade:");
+      short age = sc.nextShort();
+
+      if (age < 18) {
+        System.out.println("Pessoa cliente menor de idade, catraca liberada!");
+      } else if (age >= 18 && age <= 49) {
+        System.out.println("Pessoa adulta, catraca liberada!");
+      } else {
+        System.out.println("Pessoa adulta a partir de 50, catraca liberada!");
+      }
+
+      ages.add(age);
     }
 
     sc.close();
