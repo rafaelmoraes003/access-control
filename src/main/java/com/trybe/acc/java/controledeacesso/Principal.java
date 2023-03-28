@@ -22,6 +22,14 @@ public class Principal {
       System.out.println("1 - Acessar o estabelecimento");
       System.out.println("2 - Finalizar sistema e mostrar relatório");
 
+      option = sc.nextShort();
+
+      if (option != 1 && option != 2) {
+        System.out.println("Entre com uma opção válida!");
+        option = 1;
+        continue;
+      }
+
     }
 
     sc.close();
