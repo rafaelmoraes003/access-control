@@ -13,6 +13,7 @@ public class Principal {
    */
   public static void main(String[] args) {
     Scanner sc = new Scanner(System.in);
+    ArrayList<Short> ages = new ArrayList<Short>();
 
     sc.close();
   }
