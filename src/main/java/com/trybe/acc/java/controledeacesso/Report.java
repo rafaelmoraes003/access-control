@@ -14,7 +14,7 @@ public class Report {
   public void getReport(ArrayList<Short> ages) {
     int menores = 0;
     int adultas = 0;
-    int aPartirDeCinquenta = 0;
+    int idosos = 0;
     int total = 0;
 
     for (int age : ages) {
@@ -23,45 +23,43 @@ public class Report {
       } else if (age >= 18 && age <= 49) {
         adultas += 1;
       } else {
-        aPartirDeCinquenta += 1;
+        idosos += 1;
       }
       total += 1;
     }
 
-    printReport(menores, adultas, aPartirDeCinquenta, total);
+    printReport(menores, adultas, idosos, total);
   }
 
   /**
    * Método printReport - Imprime informções sobre os visitantes.
    */
-  public void printReport(int menores, int adultas, int aPartirDeCinquenta, int total) {
+  public void printReport(int menores, int adultas, int idosos, int total) {
     Locale.setDefault(Locale.US);
 
     DecimalFormat df = new DecimalFormat("0.00");
 
     String menoresQtd;
     String adultasQtd;
-    String aPartirDeCinquentaQtd;
+    String idososQtd;
 
     if (total <= 0) {
-      menoresQtd = adultasQtd = aPartirDeCinquentaQtd = "0.0";
+      menoresQtd = adultasQtd = idososQtd = "0.0";
     } else {
       menoresQtd = df.format((double) menores * 100 / total);
       adultasQtd = df.format((double) adultas * 100 / total);
-      aPartirDeCinquentaQtd = df.format((double) aPartirDeCinquenta * 100 / total);
+      idososQtd = df.format((double) idosos * 100 / total);
     }
-
-
 
     System.out.println("----- Quantidade -----");
     System.out.println("menores: " + menores);
     System.out.println("adultas: " + adultas);
-    System.out.println("a partir de 50: " + aPartirDeCinquenta);
+    System.out.println("a partir de 50: " + idosos);
     System.out.println();
     System.out.println("----- Percentual -----");
     System.out.println("menores: " + menoresQtd + "%");
     System.out.println("adultas: " + adultasQtd + "%");
-    System.out.println("a partir de 50: " + aPartirDeCinquentaQtd + "%");
+    System.out.println("a partir de 50: " + idososQtd + "%");
     System.out.println();
     System.out.println("TOTAL: " + total);
   }
