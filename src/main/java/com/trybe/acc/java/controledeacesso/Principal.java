@@ -30,6 +30,12 @@ public class Principal {
         continue;
       }
 
+      if (option == 2) {
+        Report report = new Report();
+        report.getReport(ages);
+        break;
+      }
+
     }
 
     sc.close();
