@@ -1,12 +1,36 @@
 package com.trybe.acc.java.controledeacesso;
 
 import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Locale;
 
 /**
  * Classe Report.
  */
 public class Report {
+  /**
+   * Método getReport - agrupa informações de visitantes.
+   */
+  public void getReport(ArrayList<Short> ages) {
+    int menores = 0;
+    int adultas = 0;
+    int aPartirDeCinquenta = 0;
+    int total = 0;
+
+    for (int age : ages) {
+      if (age < 18) {
+        menores += 1;
+      } else if (age >= 18 && age <= 49) {
+        adultas += 1;
+      } else {
+        aPartirDeCinquenta += 1;
+      }
+      total += 1;
+    }
+
+    printReport(menores, adultas, aPartirDeCinquenta, total);
+  }
+
   /**
    * Método printReport - Imprime informções sobre os visitantes.
    */
