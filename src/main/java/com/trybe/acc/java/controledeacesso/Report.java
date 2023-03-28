@@ -32,7 +32,7 @@ public class Report {
   }
 
   /**
-   * Método printReport - Imprime informções sobre os visitantes.
+   * Método printReport - Imprime informações sobre os visitantes.
    */
   public void printReport(int menores, int adultas, int idosos, int total) {
     Locale.setDefault(Locale.US);
